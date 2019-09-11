@@ -30,7 +30,7 @@
                 <div style="font-size: 0.9rem;line-height: 1.5;color: #606c71;">
                     最近更新 {{item.updateTime}}
                 </div>
-                <div style="font-size: 1.1rem;line-height: 1.5;color: #303133;padding: 10px 0px 0px 0px">
+                <div style="font-size: 1rem;line-height: 1.5;color: #303133;padding: 10px 0px 0px 0px">
                     {{item.description}}
                 </div>
             </el-card>

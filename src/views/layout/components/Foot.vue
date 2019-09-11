@@ -3,7 +3,7 @@
 		<el-row>
 			<el-col :span="10">
 				<div>
-					© 111111111111112019 GitHub-lihongliang&emsp;&emsp;
+					© 2019 GitHub-lihongliang&emsp;&emsp;
 					<a href="https://github.com/lihongliang" target="_blank">Profile</a>&emsp;&emsp;
 					<a href="https://github.com/lihongliang/vblog" target="_blank">VBlog</a>
 				</div>

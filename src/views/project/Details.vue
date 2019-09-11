@@ -19,10 +19,10 @@
                 发布 {{project.createTime}}
                 <br> 更新 {{project.updateTime}}
             </div>
-            <div style="font-size: 1.1rem;line-height: 1.5;color: #303133;padding: 20px 0px 0px 0px">
+            <div style="font-size: 1rem;line-height: 1.5;color: #303133;padding: 20px 0px 0px 0px">
                 {{project.description}}
             </div>
-            <div style="font-size: 1.1rem;color: #303133;padding: 15px 0px 15px 0px;border-bottom: 1px solid #E4E7ED;">
+            <div style="font-size: 1rem;color: #303133;padding: 15px 0px 15px 0px;border-bottom: 1px solid #E4E7ED;">
                 <el-row>
                     <el-col :span="16"  style="padding-top: 5px">
                         <el-tooltip effect="dark" :content="'star '+project.stargazersCount" placement="bottom">

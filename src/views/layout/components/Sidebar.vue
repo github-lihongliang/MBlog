@@ -20,7 +20,7 @@
                 <el-button type="text" @click="cancellation">注销</el-button>
             </div>
             <div style="margin-top: 10px;text-align: left">
-                <el-alert title="Token获取" type="info" description="在 github-> settings-> developerSettings-> personalAccessTokens 勾选gist权限,获取Token. 详情参考README.md"
+                <el-alert title="Token获取" type="info" description="在 github-> settings-> developerSettings-> personalAccessTokens 勾选gist权限,获取Token"
                     :closable="false">
                 </el-alert>
             </div>

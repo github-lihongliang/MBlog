@@ -1,16 +1,16 @@
 <template>
     <div>
-        <section class="page-header" :style="'background-image: linear-gradient(120deg, '+backgroundColorLeft+', '+backgroundColorRight+');color: '+fontColor+';'">
+        <section class="page-header">
             <div style="position:absolute; top:20px; right:20px; z-index:2;">
                 <el-tooltip effect="dark" :content="fullButton.full?'退出':'全屏'" placement="bottom-end">
                     <el-button @click="full" :icon="fullButton.full?'el-icon-close':'el-icon-rank'" circle></el-button>
                 </el-tooltip>
             </div>
-            <div v-for="(item,index) in randomIcon" :key="'ri'+index" :style="'position:absolute; top:'+item.top+'px; left:'+item.left+'px; z-index:1;'">
-                <font :style="'font-size: '+item.size+'px;color:#fff;'">
-                    <b>♪</b>
-                </font>
-            </div>
+            <!--<div v-for="(item,index) in randomIcon" :key="'ri'+index" :style="'position:absolute; top:'+item.top+'px; left:'+item.left+'px; z-index:1;'">-->
+                <!--<font :style="'font-size: '+item.size+'px;color:#fff;'">-->
+                    <!--<b>♪</b>-->
+                <!--</font>-->
+            <!--</div>-->
             <h1 class="project-name">{{blogTitle}}</h1>
             <h2 class="project-tagline">{{blogDescribe}}</h2>
             <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank">GitHub主页</a>          
@@ -85,15 +85,15 @@
             </el-card>
         </div>
         <section class="main-content">
-            <el-row>
-                <el-col :span="6" style="padding-right:10px">
-                    <sidebar></sidebar>
-                </el-col>
-                <el-col :span="18" style="padding-left:10px">
-                    <app-main></app-main>
-                </el-col>
-            </el-row>
-
+          <el-row>
+            <el-col :span="6" style="padding-right:10px">
+              <sidebar></sidebar>
+            </el-col>
+            <el-col :span="18" style="padding-left:10px">
+              <app-main></app-main>
+            </el-col>
+          </el-row>
+          <!--<compass></compass>-->
         </section>
         <section class="foot">
             <foot></foot>
@@ -107,11 +107,13 @@
     import Sidebar from './components/Sidebar'
     import AppMain from './components/AppMain'
     import Foot from './components/Foot'
+    import compass from '../compass/compass'
     export default {
         components: {
             Sidebar,
             AppMain,
-            Foot
+            Foot,
+            compass
         },
         data() {
             return {
@@ -266,13 +268,15 @@
         color: #fff;
         text-align: center;
         background-color: #159957;
-        background-image: linear-gradient(120deg, #155799, #159957);
+        background: url(../../common/images/topb.jpg) no-repeat;
+        background-size: 100% 100%;
     }
 
     .project-name {
         font-size: 3.25rem;
         margin-top: 0;
         margin-bottom: 0.1rem;
+        color: #abbaca;
     }
 
     .project-tagline {
@@ -280,13 +284,11 @@
         margin-bottom: 2rem;
         font-weight: normal;
         opacity: 0.7;
+        color: #abbaca;
     }
 
     .btn:hover {
-        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.3);
     }
 
     a:hover {
@@ -309,6 +311,7 @@
         border-width: 1px;
         border-radius: 0.3rem;
         transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+        background: #d3e5f9;
     }
 
     a {

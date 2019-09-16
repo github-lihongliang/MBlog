@@ -9,8 +9,9 @@ import store from './store'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
 import Vant from 'vant'
+import './common/less/atom.less'
+import './common/less/elui.less'
 // import 'vant/lib/vant-css/index.css'
 
 Vue.use(Vant)

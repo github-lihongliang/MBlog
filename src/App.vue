@@ -29,3 +29,10 @@
         }
     }
 </script>
+
+<style scoped lang="less" rel="stylesheet/less">
+  #app{
+    background: #f8f8f8;
+    overflow-x: hidden;
+  }
+</style>

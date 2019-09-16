@@ -3,9 +3,9 @@
 		<el-row>
 			<el-col :span="10">
 				<div>
-					© 2019 GitHub-lihongliang&emsp;&emsp;
+					© 2019 github-lihongliang&emsp;&emsp;
 					<a href="https://github.com/lihongliang" target="_blank">Profile</a>&emsp;&emsp;
-					<a href="https://github.com/lihongliang/vblog" target="_blank">VBlog</a>
+					<a href="https://github.com/github-lihongliang/MBlog.git" target="_blank">VBlog</a>
 				</div>
 			</el-col>
 			<el-col :span="4">

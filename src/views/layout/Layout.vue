@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="contentBox">
         <section class="page-header">
             <div style="position:absolute; top:20px; right:20px; z-index:2;">
                 <el-tooltip effect="dark" :content="fullButton.full?'退出':'全屏'" placement="bottom-end">
@@ -94,12 +94,14 @@
             </el-col>
           </el-row>
           <!--<compass></compass>-->
+          <!--背景色-->
+          <div class="bgcImg">
+            <img src="../../common/images/yuny.png" alt="">
+          </div>
         </section>
         <section class="foot">
             <foot></foot>
         </section>
-
-
     </div>
 </template>
 <script>
@@ -262,7 +264,8 @@
     }
 </script>
 
-<style>
+<style lang="less" rel="stylesheet/less">
+  @import "../../common/less/atom";
     .page-header {
         padding: 5rem 6rem;
         color: #fff;
@@ -270,6 +273,8 @@
         background-color: #159957;
         background: url(../../common/images/topb.jpg) no-repeat;
         background-size: 100% 100%;
+        position: relative;
+        z-index: 1;
     }
 
     .project-name {
@@ -330,6 +335,7 @@
         font-size: 1rem;
         word-wrap: break-word;
         min-height: 800px;
+        position: relative;
     }
 
     .foot {
@@ -338,5 +344,16 @@
         font-size: 12px !important;
         color: #586069 !important;
         word-wrap: break-word;
+    }
+    .contentBox{
+
+    }
+    .bgcImg{
+      width: 36rem;
+      position: absolute;
+      left: -30%;
+      top: 30%;
+      img{
+      }
     }
 </style>

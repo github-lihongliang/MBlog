@@ -6,7 +6,7 @@
                     <el-input v-model="form.title" :disabled="true"></el-input>
                 </el-form-item>
                 <el-form-item label="简要说明" prop="description">
-                    <el-input v-model="form.description" type="textarea"></el-input>
+                    <el-input v-model="form.description" type="textarea" placeholder="请输入博客描述"></el-input>
                 </el-form-item>
                 <el-form-item label="博客正文" prop="content">
                     <mavon-editor @imgAdd="imgAdd" style="max-height: 500px" ref="md" v-model="form.content" :subfield="false" :toolbars="mavonEditorToolbars"
@@ -40,10 +40,7 @@
                 ruleValidate: {
                     title: [
                         { required: true, message: '请输入标题', trigger: 'blur' },
-                        { type: 'string', max: 32, message: '标题长度不大于32字符', trigger: 'change' }
-                    ],
-                    description: [
-                        { required: true, message: '请输入博客描述', trigger: 'blur' }
+                        { type: 'string', max: 500, message: '标题长度不大于500字符', trigger: 'change' }
                     ],
                     content: [
                         { required: true, message: '请输博客入正文', trigger: 'blur' }
